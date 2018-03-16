@@ -19,6 +19,7 @@ public class DataType {
         short shortc = 3; System.out.println("sizeof short is 2 byte; min is "+ Short.MIN_VALUE + "; max is " + Short.MAX_VALUE);
         byte byted = (byte)254; System.out.println("sizeof byte is 1 byte; min is " + Byte.MIN_VALUE + "; max is " + Byte.MAX_VALUE);
 
+
         //浮点型
         float floatg = 2.0F; System.out.println("sizeof float is 4 byte; min is "+ Float.MIN_VALUE + "; max is " + Float.MAX_VALUE);
         double doubleh = 3.0D; System.out.println("sizeof Double is 8 byte; min is " + Double.MIN_VALUE + "; max is " + Double.MAX_VALUE);
