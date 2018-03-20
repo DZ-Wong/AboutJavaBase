@@ -134,13 +134,13 @@ public class Utils {
 	 * @return byte[]
 	 * @throws
 	 */
-	public static byte[] convertByteBuf(ByteBuf msg) {
-		byte[] msgBytes = new byte[msg.readableBytes()];
-		int readerIndex = msg.readerIndex();
-		msg.getBytes(readerIndex, msgBytes);
-		
-		return msgBytes;
-	}
+//	public static byte[] convertByteBuf(ByteBuf msg) {
+//		byte[] msgBytes = new byte[msg.readableBytes()];
+//		int readerIndex = msg.readerIndex();
+//		msg.getBytes(readerIndex, msgBytes);
+//
+//		return msgBytes;
+//	}
 
 	/**
 	 * 计算LRC
