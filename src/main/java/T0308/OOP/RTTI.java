@@ -1,6 +1,9 @@
 package T0308.OOP;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.util.Random;
+import java.util.regex.Pattern;
 
 /**
  * Created by vip on 2018/3/20.
@@ -14,7 +17,7 @@ public class RTTI {
     }
 
     public static void main(String[] args) {
-        //RTTI 运行时类型信息、
+        //RTTI 运行时类型信息检查、
         /*使用方式
         * 1.传统的， 编译时已经知道所有的类型，比如Shape e = (Shape)s1;
         * 2.反射 机制， 运行时发现，Class.forName()
@@ -61,6 +64,25 @@ public class RTTI {
         }
         System.out.println("After creating Initable3 ref");
         System.out.println(Initable3.staticFonFinal);
+
+        //反射机制打印所有方法
+        System.out.println();
+        int lines = 0;
+        try {
+            Class<?> cc = Class.forName("T0308.OOP.FancyToy");
+            Method[] methods = cc.getMethods();
+            Constructor[] ctors = cc.getConstructors();
+            for (Method method: methods) {
+                System.out.println(p.matcher(method.toString()).replaceAll(""));
+            }
+
+            for (Constructor ctor : ctors) {
+                System.out.println(p.matcher(ctor.toString()).replaceAll(""));
+            }
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("No such Class:" + e);
+        }
     }
 
     //使用RTTI之前，首先要获取Class对象的引用，方式有：
@@ -79,6 +101,23 @@ public class RTTI {
     /*限制-- 如果不知道某个对象的确切类型，RTTI可以告诉你，但是有一个限制，这两个类型在
     * 在编译时必须已知，这样才能使用RTTI识别它，也就是在编译时，编译器必须知道所有要通过RTTI来处理的类。*/
 
+    /*突破 -- 反射机制，Class类与java.lang.reflect 类库一起对反射的概念进行了支持，包含Field、Method、Constructor类。
+    * 这些类型的对象由jvm在运行时创建，用以表示未知类里对应的成员。这样就可以用Constructor创建新的对象。
+    * 用get() set()方法读取和修改与Field对象关联的字段，用invoke()方法调用与Method对象关联的方法。
+    * 调用getFields(),getMethods(), getConstructors()来返回表示字段方法以及构造器的对象的数组。
+    * 这样匿名对象的类信息就能在运行时被完全确定下来，不需要在编译时已知*/
+    private static String usage = "usag:\n" +
+                                  "ShowMethods qualified.class.name\n" +
+                                  "To show all methods in class or: \n" +
+                                  "ShowMethods qualified.class.name word\n"  +
+                                  "To search for methods involving's word";
+    private static Pattern p = Pattern.compile("\\w+\\.");
+
+
+
+
+    /*真正的区别：对于RTTI来说，编译器在编译时打开和检查.class文件；
+    对于反射机制来说，.class文件在编译时是不可获取的，是在运行时打开和检查.class文件*/
 
 
 }
@@ -122,3 +161,4 @@ class Initable3 {
         System.out.println("Initializing Initable3");
     }
 }
+
