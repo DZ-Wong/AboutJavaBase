@@ -10,6 +10,7 @@ public class AccessDemo extends Cookie {
 
     public void chomp() {
         bite();//这时和Cookie还在同一个package下，能够调用，在其他包下时报错。
+        sing();
     }
 
 

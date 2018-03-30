@@ -7,7 +7,8 @@ public class XmlAndJson {
     /**
      * xml :
      *      DOM解析 ；
-     *      SAX解析 ；基本原理以及各自适用场景
+     *      SAX解析 ；
+     *      基本原理以及各自适用场景
      */
 
 

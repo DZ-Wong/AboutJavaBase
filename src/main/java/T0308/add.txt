@@ -1,0 +1,12 @@
+抽象类方法的访问权限默认都是default
+接口中的方法可以说是private public default
+
+
+JNDI：java naming & directory interface  java命名目录服务。
+提供一个目录系，让其他各地的的应用程序在其上面留下自己的索引，从而满足快速查找和定位分布式应用程序的功能
+
+JTA: java transaction  api  java事务服务， 提供各种分布式事务服务。
+
+RMI/IIOP: remote method invocation / internet 对象请求中介协议， 主要用于通过远程调用服务。
+
+JMS： java message service java消息服务， 包括点对点和广播。

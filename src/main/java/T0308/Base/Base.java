@@ -19,17 +19,6 @@ public class Base {
      * string/ stringbuffer
      */
 
-    /**
-     * final
-     */
-
-    /**
-     * finally
-     */
-
-    /**
-     * finalize
-     */
 
 
     /**
@@ -110,6 +99,10 @@ public class Base {
 //        Collator
 
         String message = String.format("%s , %d", "abc", 2 );
+
+        StringBuffer s1 = new StringBuffer(10);
+        s1.append("1234");
+        System.out.println(s1.length() + "; capacity() = " + s1.capacity());
     }
 
     public static void format_eg() {
@@ -127,8 +120,45 @@ public class Base {
 
         );
     }
+
+    public static void equalsAndCompareto() {
+        Integer a = new Integer(1);
+        Integer b = new Integer(1);
+        System.out.println(a == b);
+        System.out.println(a.equals(b));// true
+        System.out.println(a.compareTo(b));
+
+        String s1 = new String("abc");
+        String s2 = new String("abc");
+        System.out.println(s1 == s2);
+        System.out.println(s1.equals(s2));// true
+        System.out.println(s1.compareTo(s2));
+        /**
+         * 当引用类型用（==）进行比较的时候
+         　　比较的是他们在内存中的存放地址，除非地址一样，否则比较后结果为false。
+
+         基本数据类型比较只能用==,不能用equals,因为用equals(参数),参数必须为对象。
+         equals的方法在在Object中定义，这个方法的初始行为是比较对象的内存地址
+         （如上面的例子），因为Object的equals方法也是用双等号（==）进行比较的
+         ，所以比较后的结果跟用双等号（==）的结果相同。
+
+
+         但是一些类中这个方法被重写了，如String,Integer,Date重写后的equals
+         不再是比较对象在内存的存放地址了，而是比较的内容。
+
+         通常compareTo用来比较大小的 而equals是比较是否相等的。
+
+         　　　　同比之下，equals的效率高，因为compareTo是按字典顺序比较两个字符串。也就是按顺序比较字符串中各个字符的 Unicode值。
+
+         　　　compareTo时：
+
+         　　　　当相同时：返回int 0；当小于时，如果此位为空，如果少一位，则返回-1，否则返回Unicode差值，
+         当大于时，如果参数对应位为空，如果多一位，则为1，否则为差值。
+         */
+    }
     public static void main(String[] args) {
-        Base.stringOp();
-        Base.format_eg();
+//        Base.stringOp();
+//        Base.format_eg();
+        Base.equalsAndCompareto();
     }
 }
