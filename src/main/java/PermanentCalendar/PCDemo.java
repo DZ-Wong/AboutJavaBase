@@ -1,5 +1,6 @@
 package PermanentCalendar;
 
+
 import java.util.Scanner;
 
 /**
@@ -44,7 +45,7 @@ public class PCDemo {
     public static int daysTillYear(int year) {
         int sum = 0;
         for (int i = 1970; i < year; i++) {
-            if (isLeapYear(year)) {
+            if (isLeapYear(i)) {
                 sum += 366;
             } else {
                 sum += 365;
@@ -100,13 +101,15 @@ public class PCDemo {
      * 打印日历。
      */
     public static void printAll(int daysOfMonth, int weekOfFirstDay) {
-        for (int i = 0; i < weekOfFirstDay%7; i++) {
+        for (int i = 0; i < weekOfFirstDay; i++) {
             System.out.printf("%-13s", " ");
         }
-        for (int i = 1; i <= daysOfMonth; i++) {
-            System.out.printf("%-13d", i);
-            if ((i + weekOfFirstDay) % 7 == 0) {
-                System.out.println();
+        for (int i = weekOfFirstDay+1, j =1; i < daysOfMonth + weekOfFirstDay + 1; i++, j++) {
+
+            if (i%7 == 0) {
+                System.out.printf("%-13d\n", j);
+            } else {
+                System.out.printf("%-13d", j);
             }
         }
     }
