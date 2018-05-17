@@ -1,0 +1,4 @@
+<bean id="dataSource" class="" init-method="init" destroy-method="destroy" >
+    <property name="url" value="${var3}" />
+    <property name="username" value="${var4}" />
+</bean>

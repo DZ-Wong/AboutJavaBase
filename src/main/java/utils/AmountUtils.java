@@ -1,3 +1,5 @@
+package utils;
+
 import java.math.BigDecimal;
 
 /**
@@ -110,8 +112,8 @@ public class AmountUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //        System.out.println(Long.parseLong(AmountUtils.changeY2F("1000000000000000")));
-        //        System.out.println(Integer.parseInt(AmountUtils.changeY2F("10000000")));
+        //        System.out.println(Long.parseLong(utils.AmountUtils.changeY2F("1000000000000000")));
+        //        System.out.println(Integer.parseInt(utils.AmountUtils.changeY2F("10000000")));
         //        System.out.println(Integer.MIN_VALUE);
         //        long a = 0;
         //        System.out.println(a);

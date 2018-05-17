@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
+ * 基本数据类型。
  * Created by vip on 2018/3/8.
  */
 public class DataType {
@@ -14,16 +15,28 @@ public class DataType {
      */
     public static strictfp void dataType() {
         //整形
-        int inta = 1_000_000; System.out.println("sizeof int is 4 byte; min is " + Integer.MIN_VALUE + "; max is "+ Integer.MAX_VALUE);
-        long longb = 1_000_000L; System.out.println("sizeof long is 8 byte; min is " + Long.MIN_VALUE+ "; max is " + Long.MAX_VALUE);
-        short shortc = 3; System.out.println("sizeof short is 2 byte; min is "+ Short.MIN_VALUE + "; max is " + Short.MAX_VALUE);
-        byte byted = (byte)254; System.out.println("sizeof byte is 1 byte; min is " + Byte.MIN_VALUE + "; max is " + Byte.MAX_VALUE);
+        int inta = 1_000_000;
+        System.out.println("sizeof int is 4 byte; min is " + Integer.MIN_VALUE + "; max is "+ Integer.MAX_VALUE);
+
+        long longb = 1_000_000L;
+        System.out.println("sizeof long is 8 byte; min is " + Long.MIN_VALUE+ "; max is " + Long.MAX_VALUE);
+
+        short shortc = 3;
+        System.out.println("sizeof short is 2 byte; min is "+ Short.MIN_VALUE + "; max is " + Short.MAX_VALUE);
+
+        /*字节型数据类型，1字节，-128-127，*/
+        byte byted = (byte)254;
+        System.out.println("sizeof byte is 1 byte; min is " + Byte.MIN_VALUE + "; max is " + Byte.MAX_VALUE);
 
 
         //浮点型
-        float floatg = 2.0F; System.out.println("sizeof float is 4 byte; min is "+ Float.MIN_VALUE + "; max is " + Float.MAX_VALUE);
-        double doubleh = 3.0D; System.out.println("sizeof Double is 8 byte; min is " + Double.MIN_VALUE + "; max is " + Double.MAX_VALUE);
+        float floatg = 2.0F;
+        System.out.println("sizeof float is 4 byte; min is "+ Float.MIN_VALUE + "; max is " + Float.MAX_VALUE);
 
+        double doubleh = 3.0D;
+        System.out.println("sizeof Double is 8 byte; min is " + Double.MIN_VALUE + "; max is " + Double.MAX_VALUE);
+
+        /*字符数据类型，2字节，0-65535， 可以存中文*/
         char chare = 'J'; /* UTF-16字符编码中的编码单元 */
 
         boolean booleanf; //不是数字类型，与整数 0 1 没有关系。

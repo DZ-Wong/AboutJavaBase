@@ -1,3 +1,5 @@
+package utils;
+
 import T0306.EncodeBytes;
 import T0308.DataType.DataType;
 import T0308.JavaIO.JavaIO;
@@ -13,7 +15,7 @@ public class Test {
         Test test = new Test();
         long amt = 123456789012L;
         Double amt3 = 7890.12;
-//        System.out.println(StringUtil.Long2Doulbe(amt));
+//        System.out.println(utils.StringUtil.Long2Doulbe(amt));
 //
 //        BigDecimal a = new BigDecimal(Long.valueOf(amt));
 //        BigDecimal a2 = new BigDecimal(Double.valueOf(amt3));

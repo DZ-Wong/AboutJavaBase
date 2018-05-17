@@ -1,6 +1,7 @@
 package T0306;
 
 /**
+ * 内部类。
  * Created by vip on 2018/3/6.
  */
 public class InnerClassDemo {

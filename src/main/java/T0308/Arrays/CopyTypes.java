@@ -10,6 +10,10 @@ public class CopyTypes {
         {10, 11, 12,}
     };
 
+    /**
+     * 整形数组复制。
+     * @param A
+     */
     public static void arrayPrint(int[][] A) {
 
         for (int i = 0; i < A.length; i++) {
@@ -29,10 +33,16 @@ public class CopyTypes {
         }
         arrayPrint(B);
         System.out.println(B.length);
-        System.out.println();
+
     }
 
-    //使用循环语句遍历复制
+
+
+    /**
+     * 使用循环语句遍历复制。
+     * @param array
+     * @return
+     */
     public String[][] copyArray1(String[][] array){
         String[][] copyArray=new String[array.length][];
         for(int i=0;i<array.length;i++){
@@ -44,6 +54,11 @@ public class CopyTypes {
         return copyArray;
     }
 
+    /**
+     * System.arraycopy。
+     * @param array
+     * @return
+     */
     public String[][] copyArray2(String[][] array){
         String[][] copyArray=new String[array.length][];
         for(int i=0;i<array.length;i++){
