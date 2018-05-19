@@ -1,3 +1,5 @@
+package utils;
+
 /**
  * 交易位图设置。
  * Created by vip on 2018/2/1.

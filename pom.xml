@@ -18,6 +18,16 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <!--<filters>-->
+            <!--<filter>src/main/resources/application.properties</filter>-->
+        <!--</filters>-->
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<filtering>true</filtering>-->
+            <!--</resource>-->
+        <!--</resources>-->
     </build>
 
     <dependencies>
@@ -47,6 +57,74 @@
         </dependency>
 
 
+
+
     </dependencies>
+
+
+    <!--<profiles>-->
+        <!--&lt;!&ndash; 环境（一）下参数值配置 &ndash;&gt;-->
+        <!--<profile>-->
+            <!--&lt;!&ndash; 环境（一）对应ID 用于mvn命令行启动时指定启动选项,-->
+             <!--配置方法：&ndash;&gt;-->
+            <!--<id>dev</id>-->
+            <!--<properties>-->
+                <!--&lt;!&ndash; 在不同环境下实际值， 有值还不够，还需要配对的参数文件 &ndash;&gt;-->
+                <!--<variableName>abcdefg</variableName>-->
+                <!--<variableName2>ABCDEFG</variableName2>-->
+            <!--</properties>-->
+            <!--<activation>-->
+                <!--&lt;!&ndash; 默认生效的配置组 &ndash;&gt;-->
+                <!--<activeByDefault>true</activeByDefault>-->
+            <!--</activation>-->
+            <!--&lt;!&ndash; 指定配置对应的文件 &ndash;&gt;-->
+            <!--<build>-->
+                <!--<filters>-->
+                    <!--<filter>src/main/resources/application.properties</filter>-->
+                <!--</filters>-->
+                <!--<resources>-->
+                    <!--<resource>-->
+                        <!--<directory>src/main/resources</directory>-->
+                        <!--<filtering>true</filtering>-->
+                    <!--</resource>-->
+                <!--</resources>-->
+            <!--</build>-->
+        <!--</profile>-->
+        <!--&lt;!&ndash; 环境（二）下参数值配置 &ndash;&gt;-->
+        <!--<profile>-->
+            <!--<id>test</id>-->
+            <!--<properties>-->
+                <!--<variableName>hijklmn</variableName>-->
+                <!--<variableName2>HIJKLMN</variableName2>-->
+            <!--</properties>-->
+        <!--</profile>-->
+    <!--</profiles>-->
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profiles.active>dev</profiles.active>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <filters>
+                    <filter>src/main/resources/dev.properties</filter>
+                </filters>
+            </build>
+        </profile>
+
+        <profile>
+            <id>test</id>
+            <properties></properties>
+            <build>
+                <filters>
+                    <filter>src/main/resources/test.properties</filter>
+                </filters>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

@@ -4,6 +4,9 @@ import java.io.Console;
 import java.util.Scanner;
 
 /**
+ * 字节流InputStream和OutputStream，字符流Reader和Writer，
+ * 以及相应缓冲流和管道流，字节和字符的转化流，包装流，以及常用包装类使用，
+ * 分析java的IO性能。
  * Created by vip on 2018/3/8.
  */
 public class JavaIO {

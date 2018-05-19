@@ -1,6 +1,7 @@
 package T0308.MultiThread;
 
 /**
+ * 多线程。
  * Created by vip on 2018/3/8.
  */
 public class MultiThread {

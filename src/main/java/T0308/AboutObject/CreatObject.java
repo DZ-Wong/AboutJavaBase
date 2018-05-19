@@ -18,7 +18,7 @@ public class CreatObject extends  A{
     public static int k = print();
 
     public static int print() {
-        System.out.println("Test print");
+        System.out.println("utils.Test print");
         return 522;
     }
 

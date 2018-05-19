@@ -1,3 +1,5 @@
+package utils;
+
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 

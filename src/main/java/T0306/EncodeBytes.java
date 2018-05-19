@@ -3,6 +3,7 @@ package T0306;
 import java.io.UnsupportedEncodingException;
 
 /**
+ * 编码转换。
  * Created by vip on 2018/3/6.
  */
 public class EncodeBytes {
