@@ -17,7 +17,7 @@ public class Demo {
      */
     public static void newCachedThreadPoolDemo() throws Exception{
         ExecutorService m = Executors.newCachedThreadPool();
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < 100; i++) {
             final int count = i;
             m.submit(new Runnable() {
                 @Override
@@ -39,7 +39,7 @@ public class Demo {
      */
     public static void newFixedThreadPoolDemo() throws Exception{
         ExecutorService m = Executors.newFixedThreadPool(4);
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < 100; i++) {
             final int count = i;
             m.submit(new Runnable() {
                 @Override

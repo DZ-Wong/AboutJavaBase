@@ -66,7 +66,7 @@ public class ProxyDemo {
         IUserDao target2 = new UserDao();
         System.out.println(target2.getClass());
 
-        //代理对象，把目标对象给代理对象，建立代理关系
+                    //代理对象，把目标对象给代理对象，建立代理关系
         IUserDao proxy2 = (IUserDao) new ProxyFactory(target2).getProxyInstance();
         System.out.println(proxy2.getClass());
         proxy2.save();
