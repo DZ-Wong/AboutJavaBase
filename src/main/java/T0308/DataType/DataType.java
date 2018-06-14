@@ -216,7 +216,9 @@ public class DataType {
     public static void testInt() {
         /*1，无论如何，Integer与new Integer不会相等。不会经历拆箱过程，new出来的对象存放在堆，而非new的Integer常量则在常量池（在方法区），他们的内存地址不一样，所以为false。
 
-2，两个都是非new出来的Integer，如果数在-128到127之间，则是true,否则为false。因为java在编译Integer i2 = 128的时候,被翻译成：Integer i2 = Integer.valueOf(128);而valueOf()函数会对-128到127之间的数进行缓存。
+2，两个都是非new出来的Integer，如果数在-128到127之间，则是true,否则为false。
+因为java在编译Integer i2 = 128的时候,被翻译成：Integer i2 = Integer.valueOf(128);
+而valueOf()函数会对-128到127之间的数进行缓存。
 
 3，两个都是new出来的,都为false。还是内存地址不一样。
 
@@ -239,6 +241,14 @@ public class DataType {
         Integer i9 = new Integer(128);
         Integer i10 = new Integer(123);
         System.out.println(i9 == i10);  //false
+
+        System.out.println(i9.equals(100));//intValue
+        Double d100 = 100d;
+        System.out.println(d100.equals(200));
+        String abc = "abc";
+        System.out.println(abc.equals("abc"));
+
+
     }
     /**
      * Object 类型:equals, hashcode
