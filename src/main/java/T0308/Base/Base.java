@@ -159,6 +159,13 @@ public class Base {
     public static void main(String[] args) {
 //        Base.stringOp();
 //        Base.format_eg();
-        Base.equalsAndCompareto();
+//        Base.equalsAndCompareto();
+
+        int i = 12;
+//        int a = i += i-= i*=i;
+        System.out.println(i += i-= i*=i);
+
+        Object obj = new Object();
+//        obj.
     }
 }
